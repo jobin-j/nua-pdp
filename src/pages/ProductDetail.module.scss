@@ -1,0 +1,21 @@
+@use '../styles/variables' as *;
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $spacing-lg;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: $spacing-xl;
+
+    @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.below {
+    margin-top: $spacing-xl;
+}

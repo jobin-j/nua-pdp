@@ -1,0 +1,72 @@
+@use '../../styles/variables' as *;
+
+.productTabs {
+    margin-top: $spacing-xl;
+    border-top: 1px solid $color-border;
+}
+
+.tabButtons {
+    display: flex;
+    border-bottom: 1px solid $color-border;
+
+    button {
+        padding: $spacing-md $spacing-lg;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: $font-size-md;
+        color: $color-grey-dark;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+}
+
+.active {
+    color: $color-black !important;
+    border-bottom: 2px solid $color-black !important;
+    font-weight: bold;
+}
+
+.tabPanel {
+    padding: $spacing-lg 0;
+}
+
+.specsTable {
+    width: 100%;
+    border-collapse: collapse;
+
+    td {
+        padding: $spacing-sm $spacing-md;
+        border-bottom: 1px solid $color-border;
+
+        &:first-child {
+            color: $color-grey-dark;
+            width: 40%;
+        }
+    }
+}
+
+.reviewCard {
+    padding: $spacing-md;
+    border: 1px solid $color-border;
+    margin-bottom: $spacing-md;
+}
+
+.reviewerName {
+    font-weight: bold;
+    margin-bottom: $spacing-xs;
+}
+
+.reviewRating {
+    color: #f5a623;
+    margin-bottom: $spacing-xs;
+}
+
+.reviewText {
+    color: $color-grey-dark;
+    font-size: $font-size-md;
+}

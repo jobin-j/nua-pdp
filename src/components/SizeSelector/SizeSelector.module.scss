@@ -1,0 +1,55 @@
+@use '../../styles/variables' as *;
+
+.sizeSelector {
+    margin-bottom: $spacing-md;
+}
+
+.sizeOptions {
+    display: flex;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.sizeWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    padding: $spacing-sm $spacing-md;
+    border: 1px solid $color-border;
+    background-color: $color-white;
+    cursor: pointer;
+    font-size: $font-size-md;
+    min-width: 48px;
+
+    &:hover:not(:disabled) {
+        border-color: $color-black;
+    }
+}
+
+.active {
+    background-color: $color-black;
+    color: $color-white;
+    border-color: $color-black;
+}
+
+.soldOut {
+    opacity: 0.4;
+    cursor: not-allowed;
+    text-decoration: line-through;
+    color: $color-grey-dark;
+}
+
+.lowStock {
+    font-size: $font-size-sm;
+    color: $color-low-stock;
+    margin-top: $spacing-xs;
+}

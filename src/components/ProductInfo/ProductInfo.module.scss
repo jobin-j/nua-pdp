@@ -1,0 +1,68 @@
+@use '../../styles/variables' as *;
+
+.wrapper {
+    padding: $spacing-md;
+}
+
+.brand {
+    font-size: $font-size-sm;
+    color: $color-grey-dark;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: $spacing-xs;
+}
+
+.title {
+    font-size: $font-size-xxl;
+    margin-bottom: $spacing-md;
+}
+
+.priceBlock {
+    display: flex;
+    gap: $spacing-sm;
+    align-items: center;
+    margin-bottom: $spacing-md;
+}
+
+.price {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+}
+
+.salePrice {
+    font-size: $font-size-xl;
+    color: red;
+    font-weight: bold;
+}
+
+.originalPrice {
+    font-size: $font-size-md;
+    text-decoration: line-through;
+    color: $color-grey-dark;
+}
+
+.addToCart {
+    width: 100%;
+    padding: $spacing-md;
+    background-color: $color-black;
+    color: $color-white;
+    border: none;
+    font-size: $font-size-lg;
+    cursor: pointer;
+    margin-top: $spacing-md;
+
+    &:disabled {
+        background-color: $color-grey-dark;
+        cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+        opacity: 0.85;
+    }
+}
+
+.delivery {
+    font-size: $font-size-sm;
+    color: $color-grey-dark;
+    margin-top: $spacing-sm;
+}

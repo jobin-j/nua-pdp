@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+
+.swatches {
+    display: flex;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-md;
+}
+
+.swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid $color-border;
+    cursor: pointer;
+    padding: 0;
+}
+
+.active {
+    border: 3px solid $color-black;
+    outline: 2px solid $color-white;
+    outline-offset: -4px;
+}

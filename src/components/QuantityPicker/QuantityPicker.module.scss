@@ -1,0 +1,38 @@
+@use '../../styles/variables' as *;
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-md;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    border: 1px solid $color-border;
+}
+
+.button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: $color-white;
+    cursor: pointer;
+    font-size: $font-size-lg;
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+        background: $color-grey-light;
+    }
+}
+
+.quantity {
+    width: 40px;
+    text-align: center;
+    font-size: $font-size-md;
+}
