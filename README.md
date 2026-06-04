@@ -1,5 +1,8 @@
 # Nua PDP — Frontend Assignment
 
+## Live Site
+https://nua-pdp.netlify.app
+
 ## Setup
 
 git clone https://github.com/jobin-j/nua-pdp.git
