@@ -1,5 +1,5 @@
 import { useParams, useSearchParams } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useProduct } from '../hooks/useProduct';
 import ImageGallery from '../components/ImageGallery/ImageGallery';
 import ProductInfo from '../components/ProductInfo/ProductInfo';
@@ -14,6 +14,27 @@ const ProductDetail = () => {
     const { product, loading, error } = useProduct(id);
     const [quantity, setQuantity] = useState(1);
     const { addToCart } = useCartContext();
+
+    useEffect(() => {
+        if (!product) return;
+        
+        const urlColour = searchParams.get('colour');
+        const urlSize = searchParams.get('size');
+        
+        const validColour = product?.variants?.colours?.includes(urlColour)
+            ? urlColour
+            : product?.variants?.colours?.[0];
+        
+        const validSize = product?.variants?.sizes?.find(s => s.label === urlSize)
+            ? urlSize
+            : null;
+
+        const params = {};
+        if (validColour) params.colour = validColour;
+        if (validSize) params.size = validSize;
+
+        setSearchParams(params, { replace: true });
+    }, [product]);
     
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error.message}</div>;

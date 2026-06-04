@@ -15,3 +15,7 @@ Choosing between tabs or accordion for the bottom section. Both options are good
 1. Improve product listing page with proper card design
 2. Instead of plain "Loading..." text, I would have created some good loader design
 3. Would have added TypeScript for prop type safety
+
+## URL State Handling
+
+If someone manually edits the url with a colour or size that doesn't exist, the app will correct it on load. It falls back to the first valid colour and clears the size. This way the page won't break and deep linking still works fine.
